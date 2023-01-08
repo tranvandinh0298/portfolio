@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: #0a0416;
+    padding: 8px 0 10px;
+    color: var(--white-color);
+}
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 500;
+    margin: 0;
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

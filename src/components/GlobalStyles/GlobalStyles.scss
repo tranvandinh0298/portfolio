@@ -1,11 +1,13 @@
 @import 'normalize.css';
 
 :root {
-    --primary-color: #fe2c55;
+    --primary-color: #c770f0;
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #161823;
-    --font-family: 'ProximaNova', sans-serif;
+    --font-family: Raleway, serif !important;
+    // Header
+    --default-header-height: 69px;
+    --default-logo-height: 38px;
 }
 
 * {
@@ -19,7 +21,7 @@ html {
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family) !important;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;
@@ -34,7 +36,20 @@ input,
     outline: none;
 }
 
-a {
+a,
+a:hover {
     color: var(--text-color);
     text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Fonts enmbeded
+@font-face {
+    font-family: Raleway;
+    src: url('/assets/fonts/Raleway.woff2');
 }

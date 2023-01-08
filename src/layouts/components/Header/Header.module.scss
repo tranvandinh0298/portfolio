@@ -1,0 +1,46 @@
+.wrapper {
+    display: block;
+    width: 100%;
+    height: var(--default-header-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 6px 32px;
+    transition: background 0.3s ease;
+    font-size: 1.8rem;
+    &.sticky {
+        backdrop-filter: blur(15px);
+        background-color: #1b1a2ea9;
+        box-shadow: 0 10px 10px 0 rgba(9, 5, 29, 0.171);
+    }
+    button,
+    a {
+        font-size: 1.8rem;
+    }
+}
+.inner {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: block;
+    height: var(--default-logo-height);
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav__item + .nav__item {
+    margin-left: 20px;
+}

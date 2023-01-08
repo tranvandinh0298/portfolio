@@ -1,17 +1,17 @@
 import { Fragment } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/layouts';
 function App() {
     return (
-        <BrowserRouter>
+        <Router>
             <div>
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         let Layout = DefaultLayout;
                         if (route.layout) {
                             Layout = route.layout;
-                        } else if (route.layout === undefined) {
+                        } else if (route.layout === null) {
                             Layout = Fragment;
                         }
                         const Component = route.component;
@@ -29,7 +29,7 @@ function App() {
                     })}
                 </Routes>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 }
 
