@@ -1,0 +1,28 @@
+.wrapper {
+}
+
+.primary {
+    color: var(--primary-color);
+}
+
+.upper {
+    text-transform: uppercase;
+}
+.lower {
+    text-transform: lowercase;
+}
+.capital {
+    text-transform: capitalize;
+}
+.italic {
+    font-style: italic;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}

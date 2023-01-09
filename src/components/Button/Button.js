@@ -5,8 +5,10 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
+    target,
     primary = false,
     disabled = false,
+    rounded = false,
     underline = false,
     effect,
     children,
@@ -33,11 +35,13 @@ function Button({
     } else if (href) {
         props.href = href;
         Component = 'a';
+        if (target) props[target] = target;
     }
     const classes = cx('wrapper', {
         [className]: className,
         primary,
         disabled,
+        rounded,
         underline,
         [effect]: effect,
     });
