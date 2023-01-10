@@ -1,4 +1,7 @@
 .wrapper {
+    & ~ .wrapper {
+        margin-top: 30px;
+    }
 }
 
 .primary {
@@ -25,4 +28,15 @@
 }
 .left {
     text-align: left;
+}
+.justify {
+    text-align: justify;
+}
+
+.title {
+    padding-bottom: 15px;
+    font-size: 4rem;
+}
+.paragraph {
+    font-size: 2rem;
 }

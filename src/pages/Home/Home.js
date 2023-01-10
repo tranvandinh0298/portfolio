@@ -9,31 +9,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Button from '~/components/Button';
 const cx = classNames.bind(styles);
-
+const introStrings = ['Developer', 'Deep Learning Engineer', 'MERN Stack Developer', 'Open Source Contributor'];
+const socialLinks = [
+    {
+        icon: <FontAwesomeIcon icon={faGithub} />,
+        title: 'Github',
+        link: 'https://github.com/soumyajit4419',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faTwitter} />,
+        title: 'Twitter',
+        link: 'https://twitter.com/Soumyajit4419',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faLinkedin} />,
+        title: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/soumyajit4419/',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faInstagram} />,
+        title: 'Instagram',
+        link: 'https://www.instagram.com/soumyajit4419',
+    },
+];
 function Home() {
-    const introStrings = ['Developer', 'Deep Learning Engineer', 'MERN Stack Developer', 'Open Source Contributor'];
-    const socialLinks = [
-        {
-            icon: <FontAwesomeIcon icon={faGithub} />,
-            title: 'Github',
-            link: 'https://github.com/soumyajit4419',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faTwitter} />,
-            title: 'Twitter',
-            link: 'https://twitter.com/Soumyajit4419',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faLinkedin} />,
-            title: 'LinkedIn',
-            link: 'https://www.linkedin.com/in/soumyajit4419/',
-        },
-        {
-            icon: <FontAwesomeIcon icon={faInstagram} />,
-            title: 'Instagram',
-            link: 'https://www.instagram.com/soumyajit4419',
-        },
-    ];
     return (
         <div className={cx('wrapper')}>
             <section className={cx('section', { home: true })}>
@@ -41,11 +40,11 @@ function Home() {
                     <Row>
                         <Col md={7}>
                             <div className={cx('heading')}>
-                                <Text type="h1" capital className={cx('title')}>
+                                <Text type="h1" title capital>
                                     Hi there!
                                     <span className={cx('icon')}>👋🏻</span>
                                 </Text>
-                                <Text type="h1" upper className={cx('title')}>
+                                <Text type="h1" title upper>
                                     I'm
                                     <Text type="span" primary>
                                         Soumyajit Behera
@@ -69,7 +68,7 @@ function Home() {
                     <Row>
                         <Col md={8}>
                             <div className={cx('introduction')}>
-                                <Text type="h1" upper center className={cx('title')}>
+                                <Text type="h1" title upper center>
                                     LET ME{' '}
                                     <Text type="span" primary>
                                         INTRODUCE
@@ -77,17 +76,17 @@ function Home() {
                                     MYSELF
                                 </Text>
                                 <div className={cx('description')}>
-                                    <Text>
+                                    <Text paragraph>
                                         I fell in love with programming and I have at least learnt something, I think…
                                         🤷‍♂️
                                     </Text>
-                                    <Text>
+                                    <Text paragraph>
                                         I am fluent in classics like{' '}
                                         <Text type="span" primary italic>
                                             C++, Javascript and Python .
                                         </Text>
                                     </Text>
-                                    <Text>
+                                    <Text paragraph>
                                         My field of Interest's are building new{' '}
                                         <Text type="span" primary italic>
                                             Web Technologies and Products
@@ -97,7 +96,7 @@ function Home() {
                                             Deep Learning and Natural Launguage Processing.
                                         </Text>
                                     </Text>
-                                    <Text>
+                                    <Text paragraph>
                                         Whenever possible, I also apply my passion for developing products with{' '}
                                         <Text type="span" primary italic>
                                             Node.js
@@ -123,7 +122,7 @@ function Home() {
                 </Container>
             </section>
             <section className={cx('section', { social: true })}>
-                <Text type="h1" upper center className={cx('title')}>
+                <Text type="h1" title upper center>
                     Find me on
                 </Text>
                 <Text center>

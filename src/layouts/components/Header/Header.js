@@ -33,27 +33,35 @@ function Header() {
                 <nav>
                     <ul className={cx('nav__list')}>
                         <li className={cx('nav__item')}>
-                            <Button underline leftIcon={<FontAwesomeIcon icon={faHouse} />}>
+                            <Button to={config.routes.home} underline leftIcon={<FontAwesomeIcon icon={faHouse} />}>
                                 Home
                             </Button>
                         </li>
                         <li className={cx('nav__item')}>
-                            <Button underline leftIcon={<FontAwesomeIcon icon={faUser} />}>
+                            <Button to={config.routes.about} underline leftIcon={<FontAwesomeIcon icon={faUser} />}>
                                 About
                             </Button>
                         </li>
                         <li className={cx('nav__item')}>
-                            <Button underline leftIcon={<FontAwesomeIcon icon={faSquarePollHorizontal} />}>
+                            <Button
+                                to={config.routes.projects}
+                                underline
+                                leftIcon={<FontAwesomeIcon icon={faSquarePollHorizontal} />}
+                            >
                                 Projects
                             </Button>
                         </li>
                         <li className={cx('nav__item')}>
-                            <Button underline leftIcon={<FontAwesomeIcon icon={faFileLines} />}>
+                            <Button
+                                to={config.routes.resume}
+                                underline
+                                leftIcon={<FontAwesomeIcon icon={faFileLines} />}
+                            >
                                 Resume
                             </Button>
                         </li>
                         <li className={cx('nav__item')}>
-                            <Button underline leftIcon={<FontAwesomeIcon icon={faPenNib} />}>
+                            <Button to={config.routes.blogs} underline leftIcon={<FontAwesomeIcon icon={faPenNib} />}>
                                 Blogs
                             </Button>
                         </li>

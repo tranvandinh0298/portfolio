@@ -1,25 +1,14 @@
 .wrapper {
 }
-.section {
-    padding: var(--section-padding-top) 0 32px;
+.home {
+    background-image: var(--image-gradient), url(/assets/images/home-background.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    &.home {
-        background-image: var(--image-gradient), url(/assets/images/home-background.jpg);
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        & .icon {
-            animation-name: wave;
-        }
+    .icon {
+        animation-name: wave;
     }
-    &.social {
-        padding-top: 40px;
-        padding-bottom: 70px;
-    }
-}
-.section:first-child {
-    padding-top: calc(var(--section-padding-top) + var(--default-header-height));
 }
 
 .heading {
@@ -42,27 +31,15 @@
 .typing {
     padding-top: 40px;
 }
-.image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
-    }
-}
+
 .introduction {
 }
 .description {
     margin-top: 40px;
 }
-.description p {
-    font-size: 2rem;
-}
-.description p + p {
-    margin-top: 30px;
-}
+// .description p {
+//     font-size: 2rem;
+// }
 .social__links {
     display: flex;
     justify-content: center;
