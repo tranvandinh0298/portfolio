@@ -93,7 +93,7 @@ function About() {
                 <Container>
                     <Row>
                         {languages.map((language, index) => (
-                            <Col key={index} md={3}>
+                            <Col className={cx('item')} key={index} md={3}>
                                 {<Card data={language} />}
                             </Col>
                         ))}
@@ -110,7 +110,7 @@ function About() {
                 <Container>
                     <Row>
                         {tools.map((tool, index) => (
-                            <Col key={index} md={3}>
+                            <Col className={cx('item')} key={index} md={3}>
                                 {<Card data={tool} />}
                             </Col>
                         ))}
