@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Footer.module.scss';
 import Button from '~/components/Button';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 const cx = classNames.bind(styles);
 function Footer() {
     return (
@@ -21,6 +21,15 @@ function Footer() {
                         <div className={cx('links')}>
                             <Button href="https://github.com/tranvandinh0298/portfolio">
                                 <FontAwesomeIcon icon={faGithub} />
+                            </Button>
+                            <Button>
+                                <FontAwesomeIcon icon={faTwitter} />
+                            </Button>
+                            <Button>
+                                <FontAwesomeIcon icon={faLinkedin} />
+                            </Button>
+                            <Button>
+                                <FontAwesomeIcon icon={faInstagram} />
                             </Button>
                         </div>
                     </Col>

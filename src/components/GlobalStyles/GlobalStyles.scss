@@ -68,6 +68,9 @@ ul {
 .section:last-child {
     padding-bottom: 70px;
 }
+.item {
+    height: max-content;
+}
 .image {
     display: flex;
     align-items: center;

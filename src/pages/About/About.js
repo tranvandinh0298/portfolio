@@ -1,45 +1,16 @@
 import classNames from 'classnames/bind';
 
 import { Col, Container, Row } from 'react-bootstrap';
-import { CgCPlusPlus } from 'react-icons/cg';
-import { DiJavascript1, DiReact, DiNodejs, DiMongodb, DiPython, DiGit } from 'react-icons/di';
-import {
-    SiPytorch,
-    SiFirebase,
-    SiNextdotjs,
-    SiLinux,
-    SiVisualstudiocode,
-    SiPostman,
-    SiHeroku,
-    SiVercel,
-} from 'react-icons/si';
 import Text from '~/components/Text';
 import List from '~/components/List';
 import images from '~/assets/images';
 import styles from './About.module.scss';
-import Card from '~/components/Card';
+import Skills from './Skills';
+import Tools from './Tools';
 import GitHubCalendar from 'react-github-calendar';
 const cx = classNames.bind(styles);
 const hobbies = ['Playing games', 'Writing Tech Blogs', 'Traveling'];
-const languages = [
-    { icon: <CgCPlusPlus />, alt: 'C++' },
-    { icon: <DiJavascript1 />, alt: 'Js' },
-    { icon: <DiNodejs />, alt: 'NodeJs' },
-    { icon: <DiReact />, alt: 'React' },
-    { icon: <DiMongodb />, alt: 'MongoDB' },
-    { icon: <SiNextdotjs />, alt: 'Dotjs' },
-    { icon: <DiGit />, alt: 'Git' },
-    { icon: <SiFirebase />, alt: 'Firebase' },
-    { icon: <DiPython />, alt: 'Python' },
-    { icon: <SiPytorch />, alt: 'Pytorch' },
-];
-const tools = [
-    { icon: <SiLinux />, alt: 'Linus' },
-    { icon: <SiVisualstudiocode />, alt: 'Visual Studio Code' },
-    { icon: <SiPostman />, alt: 'Postman' },
-    { icon: <SiVercel />, alt: 'Vercel' },
-    { icon: <SiHeroku />, alt: 'Heroku' },
-];
+
 function About() {
     return (
         <div className={cx('wrapper')}>
@@ -90,15 +61,7 @@ function About() {
                         Skill set
                     </Text>
                 </Text>
-                <Container>
-                    <Row>
-                        {languages.map((language, index) => (
-                            <Col className={cx('item')} key={index} md={3}>
-                                {<Card data={language} />}
-                            </Col>
-                        ))}
-                    </Row>
-                </Container>
+                <Skills />
             </section>
             <section className={cx('section')}>
                 <Text type="h1" title capital center>
@@ -107,15 +70,7 @@ function About() {
                     </Text>
                     I use
                 </Text>
-                <Container>
-                    <Row>
-                        {tools.map((tool, index) => (
-                            <Col className={cx('item')} key={index} md={3}>
-                                {<Card data={tool} />}
-                            </Col>
-                        ))}
-                    </Row>
-                </Container>
+                <Tools />
             </section>
             <section className={cx('section')}>
                 <Text type="h1" title capital center>

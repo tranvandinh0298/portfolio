@@ -1,10 +1,24 @@
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
 import { DefaultLayout } from '~/layouts';
+import Loading from '~/components/Loading/';
+import ScrollToTop from '~/components/ScrollToTop';
 function App() {
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const handleLoading = () => {
+            console.log('document was not ready, display loading icon');
+            setLoading(false);
+        };
+        window.addEventListener('load', handleLoading);
+        return () => window.removeEventListener('load', handleLoading);
+    }, []);
+
     return (
         <Router>
+            <Loading display={loading} />
+            <ScrollToTop />
             <div>
                 <Routes>
                     {publicRoutes.map((route, index) => {

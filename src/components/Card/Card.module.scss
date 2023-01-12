@@ -38,3 +38,14 @@
     min-height: 220px;
     object-fit: contain;
 }
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    .actions a,
+    .actions button {
+        flex-basis: 20%;
+    }
+}

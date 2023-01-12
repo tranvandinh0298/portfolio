@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
@@ -21,5 +22,8 @@ function List({ data }) {
         </ul>
     );
 }
+List.propTypes = {
+    data: PropTypes.object.isRequired,
+};
 
 export default List;

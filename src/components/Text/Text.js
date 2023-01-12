@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './Text.module.scss';
 const cx = classNames.bind(styles);
@@ -42,5 +43,22 @@ function Text({
     });
     return <Wrapper className={classes}> {children} </Wrapper>;
 }
+
+Text.propTypes = {
+    type: PropTypes.string,
+    primary: PropTypes.bool,
+    upper: PropTypes.bool,
+    lower: PropTypes.bool,
+    capital: PropTypes.bool,
+    italic: PropTypes.bool,
+    center: PropTypes.bool,
+    left: PropTypes.bool,
+    right: PropTypes.bool,
+    justify: PropTypes.bool,
+    title: PropTypes.bool,
+    paragraph: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired,
+};
 
 export default Text;

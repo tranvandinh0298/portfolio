@@ -1,7 +1,7 @@
 const images = {
     logo: require('~/assets/images/logo.png'),
     noImage: require('~/assets/images/image-placeholder.png'),
-    loading: require('~/assets/images/loading.svg'),
+    loading: require('~/assets/images/loading.svg').default,
     homeBackground: require('~/assets/images/home-background.jpg'),
     homeIntroduction: require('~/assets/images/home-introduction.svg').default,
     aboutIntroduction: require('~/assets/images/about-introduction.png'),

@@ -47,6 +47,7 @@
         width: 100%;
     }
     // effect
+    // jump
     &.jump:hover {
         background-color: #a24dd386;
         border-color: #a24dd386;
@@ -56,6 +57,11 @@
     &.glow:hover {
         box-shadow: 0 0 10px 5px #87209e;
         text-shadow: 0 0 2px #87209e;
+    }
+    // hightlight
+    &.hightlight:hover {
+        background-color: #6d20c5d7;
+        border-color: #6d20c5d7;
     }
 }
 .icon {
