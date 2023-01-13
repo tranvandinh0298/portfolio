@@ -8,8 +8,7 @@ function App() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         const handleLoading = () => {
-            console.log('document was not ready, display loading icon');
-            setLoading(false);
+            if (document.readyState === 'complete') setLoading(false);
         };
         window.addEventListener('load', handleLoading);
         return () => window.removeEventListener('load', handleLoading);
