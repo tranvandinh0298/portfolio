@@ -41,3 +41,15 @@
 .paragraph {
     font-size: 2rem;
 }
+
+@media screen and (max-width: 739px) {
+    .title {
+        padding-bottom: 10px;
+        font-size: 3rem;
+    }
+    .wrapper {
+        & ~ .wrapper {
+            margin-top: 20px;
+        }
+    }
+}

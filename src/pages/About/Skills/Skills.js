@@ -21,7 +21,7 @@ function Skills() {
         <Container>
             <Row>
                 {languages.map((language, index) => (
-                    <Col className={'item'} key={index} md={3}>
+                    <Col className={'item'} key={index} md={3} xs={6}>
                         {<Card data={language} />}
                     </Col>
                 ))}

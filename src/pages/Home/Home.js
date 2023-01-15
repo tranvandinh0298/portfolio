@@ -114,7 +114,7 @@ function Home() {
                             </div>
                         </Col>
                         <Col md={4}>
-                            <div className={cx('image')}>
+                            <div className={cx('avatar', { image: true })}>
                                 <img src={images.avatar} alt="Home Avatar" />
                             </div>
                         </Col>

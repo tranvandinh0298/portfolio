@@ -21,3 +21,13 @@
     align-items: center;
     justify-content: center;
 }
+
+// responsive
+@media screen and (max-width: 739px) {
+    .wrapper {
+        padding-bottom: 20px;
+    }
+    .copyright {
+        padding-bottom: 10px;
+    }
+}
