@@ -80,7 +80,7 @@
 @media screen and (max-width: 739px) {
     .wrapper {
         height: auto;
-        padding: 16px 32px;
+        padding: 16px 32px !important;
         background-color: #181a27;
     }
     .nav__toggle {
